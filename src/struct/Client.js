@@ -2,11 +2,11 @@ const { Client, Collection } = require("discord.js");
 const PluginManager = require("./pluginManager");
 const cmdLoader = require("../loaders/commands");
 module.exports = class PluginClient extends Client {
-  constructor(clientOpts, opts, PluginOpts) {
-    super(clientOpts, opts, PluginOpts);
+  constructor(clientOpts, opts) {
+    super(clientOpts, opts);
     /* collections and managers */
     this.commands = new Collection();
-    this.plugins = new PluginManager(this, PluginOpts);
+    this.plugins = new PluginManager(this);
     this.events = new Collection();
     this.aliases = new Collection();
     this.cooldowns = new Collection();

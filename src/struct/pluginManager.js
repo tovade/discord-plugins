@@ -1,21 +1,23 @@
 const { EventEmitter } = require("events");
 const path = require("path");
+const glob = require("glob");
 module.exports = class PluginManager extends EventEmitter {
-  constructor(client, options) {
-    super(client, options);
+  constructor(client) {
+    super(client);
     this.client = client;
   }
   async use(pack, client = this.client) {
+    console.log("loading plugins....");
+    let plugin;
     try {
-      const plugin = require(pack) || require(path.resolve(pack));
-      if (!plugin)
-        throw new Error(
-          "Plugin is not installed via npm or plugin does not exist."
-        );
-      await plugin.load(client);
-      this.emit("plugin_loaded", pack);
+      plugin = require(pack);
     } catch (err) {
-      this.emit("loader_error", err);
+      plugin = require(path.resolve(pack));
     }
+
+    if (!plugin) return console.log(`Plugin (${pack}) does not exist.`);
+
+    await plugin.load(client);
+    this.emit("plugin", pack);
   }
 };
