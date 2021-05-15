@@ -12,4 +12,5 @@ const client = Client(
 client.plugins.use("plugin here"); // DO NOT DO THIS THIS PLUGIN IS INVALID AND ONLY FOR LEARNING SHOWOFF
 ```
 
-❤ Typings by CasperTheGhost and made by darkcodes and with ❤
+any issues? feel free to join my [Discord](https://discord.gg/HBZcEhxHSj)
+❤ Typings by CasperTheGhost and made with ❤
