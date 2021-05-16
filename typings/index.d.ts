@@ -1,4 +1,4 @@
-declare module "discord-plugins" {
+declare module "discord-bot-plugins" {
   import EventEmitter from "events";
   import { Client, ClientOptions as DClientOptions } from "discord.js";
 
@@ -22,3 +22,4 @@ declare module "discord-plugins" {
     );
   }
 }
+declare module "path" {}

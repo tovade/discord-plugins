@@ -1,19 +1,31 @@
 {
   "name": "discord-bot-plugins",
   "version": "1.1.2",
-  "description": "",
+  "description": "A custom client for discord bots to support plugins!",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tovade/discord-plugins"
+  },
+  "bugs": {
+    "url": "https://github.com/tovade/discord-plugins/issues"
+  },
   "main": "./src/index.js",
   "dependencies": {
     "discord.js": "^12.5.1",
+    "eris": "^0.15.1",
     "events": "^3.3.0",
     "fs": "0.0.1-security",
     "glob": "^7.1.6",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "util": "^0.12.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/events": "^3.0.0",
+    "@types/node": "^15.3.0"
+  },
   "scripts": {
     "test": "node ./test/index.js"
   },
-  "author": "",
+  "author": "Tovade",
   "license": "ISC"
 }
