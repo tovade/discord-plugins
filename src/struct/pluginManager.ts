@@ -1,12 +1,13 @@
-const { EventEmitter } = require("events");
-const path = require("path");
-const glob = require("glob");
-module.exports = class PluginManager extends EventEmitter {
-  constructor(client) {
-    super(client);
-    this.client = client;
+import path from "path"
+import { EventEmitter } from "events"
+import {Client } from "discord.js"
+export default class PluginManager extends EventEmitter {
+  public client: Client
+  constructor(client: Client) {
+    super();
+    this.client = client
   }
-  async use(pack, client = this.client) {
+  async use(pack: any, client = this.client) {
     console.log("loading plugins....");
     let plugin;
     try {
