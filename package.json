@@ -1,6 +1,6 @@
 {
   "name": "discord-bot-plugins",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "description": "A custom client for discord bots to support plugins!",
   "repository": {
     "type": "git",
