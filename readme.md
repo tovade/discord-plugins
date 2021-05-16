@@ -31,7 +31,3 @@ module.exports.load = async (client) => {
 any issues? feel free to join my [Discord](https://discord.gg/HBZcEhxHSj)
 
 ❤ Typings by CasperTheGhost and made with ❤
-
-```
-
-```
