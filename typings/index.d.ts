@@ -10,12 +10,6 @@ declare module "discord-plugins" {
     loaderError: [Error];
   }
 
-  export interface ClientOptions {
-    token: string;
-    prefix: string;
-    owners?: string[];
-  }
-
   export class PluginManager extends EventEmitter {
     constructor(client: Client);
 
@@ -25,10 +19,6 @@ declare module "discord-plugins" {
   export class PluginClient extends Client {
     constructor(
       clientOptions: DClientOptions,
-      options: ClientOptions,
     );
-
-    validate(): Promise<boolean>;
-    start(): Promise<void>;
   }
 }
