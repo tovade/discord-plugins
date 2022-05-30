@@ -4,7 +4,7 @@ declare module "discord-bot-plugins" {
   import { ClientOptions as EClientOptions} from "eris"
 
   export interface Pluginevents {
-    plugin: [any];
+    PluginLoaded: [any];
   }
 
   export interface clientEvents {
@@ -15,6 +15,7 @@ declare module "discord-bot-plugins" {
     constructor(client: Client);
 
     use(pack: any, client?: Client);
+    
   }
 
   export class PluginClient extends Client {

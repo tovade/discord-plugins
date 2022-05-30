@@ -19,6 +19,6 @@ export default class PluginManager extends EventEmitter {
     if (!plugin) return console.log(`Plugin (${pack}) does not exist.`);
 
     await plugin.load(client);
-    this.emit("plugin", pack);
+    this.emit("PluginLoaded", pack);
   }
 };
